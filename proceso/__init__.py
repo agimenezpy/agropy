@@ -1,6 +1,8 @@
 import os.path as pth
 from climatepy.scenario import RCP_45, RCP_85, REMOTE_URL
 from climatepy.util.dirs import load_all
+import matplotlib.pyplot as plt
+plt.style.use('ggplot')
 
 __author__ = 'agimenez'
 
