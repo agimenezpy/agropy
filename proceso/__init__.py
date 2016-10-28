@@ -1,7 +1,9 @@
+import matplotlib.pyplot as plt
 import os.path as pth
+
 from climatepy.scenario import RCP_45, RCP_85, REMOTE_URL
 from climatepy.util.dirs import load_all
-import matplotlib.pyplot as plt
+
 plt.style.use('ggplot')
 
 __author__ = 'agimenez'
@@ -9,6 +11,7 @@ __author__ = 'agimenez'
 ROOT_DIR = pth.dirname(pth.dirname(__file__))
 SYM_LINKS = load_all(pth.join(ROOT_DIR, "alcance"))
 MODEL_DIR = SYM_LINKS["Modelo_ETA"]
+CRU_DIR = SYM_LINKS["Modelo_CRU"]
 RCP_45 = pth.join(MODEL_DIR, RCP_45)
 RCP_85 = pth.join(MODEL_DIR, RCP_85)
 SHP_DIR = SYM_LINKS["Mapas_Generales"]
@@ -34,4 +37,5 @@ CRU_URL = [
 ]
 
 GRANCHACO_SHP_URL = "Mapas Generales/Departamentos_y_Provincias_del_Gran_Chaco.shp"
-PARAGUAY_SHP_URL = "Mapas Generales/Division-Adminsitrativa-Nueva/Paraguay_Division_Administrativa/PRY_adm1.shp"
+PARAGUAY_SHP_URL = "shp/PRY_adm1.shp"
+CRU_XLS = "shp/cru_ts23_1991_2014.xlsx"
