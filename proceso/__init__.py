@@ -11,7 +11,9 @@ __author__ = 'agimenez'
 ROOT_DIR = pth.dirname(pth.dirname(__file__))
 SYM_LINKS = load_all(pth.join(ROOT_DIR, "alcance"))
 MODEL_DIR = SYM_LINKS["Modelo_ETA"]
+MODEL2_DIR = SYM_LINKS["Modelo_MIROC"]
 CRU_DIR = SYM_LINKS["Modelo_CRU"]
+M_RCP_85 = pth.join(MODEL2_DIR, RCP_85)
 RCP_45 = pth.join(MODEL_DIR, RCP_45)
 RCP_85 = pth.join(MODEL_DIR, RCP_85)
 SHP_DIR = SYM_LINKS["Mapas_Generales"]
@@ -29,6 +31,13 @@ RCP_85_URL = [
      "Anual/PREC/Eta_HadGEM2-ES_20km_RCP8.5_Anual_PREC_template.ctl"),
     ("Mensual/TP2M/Eta_HadGEM2-ES_20km_RCP8.5_Mensual_TP2M_template.ctl",
      "Anual/TP2M/Eta_HadGEM2-ES_20km_RCP8.5_Anual_TP2M_template.ctl")
+]
+
+M_RCP_85_URL = [
+    ("Mensual/PREC/Eta_MIROC5_20km_RCP8.5_Mensual_PREC_template.ctl",
+     "Anual/PREC/Eta_MIROC5_20km_RCP8.5_Anual_PREC_template.ctl"),
+    ("Mensual/TP2M/Eta_MIROC5_20km_RCP8.5_Mensual_TP2M_template.ctl",
+     "Anual/TP2M/Eta_MIROC5_20km_RCP8.5_Anual_TP2M_template.ctl")
 ]
 
 CRU_URL = [
